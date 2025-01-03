@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - FutureSkills Training</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="FutureSkills Logo" class="logo-img">
+                <span class="logo-text">FutureSkills Training</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="register-form" class="section">
+            <div class="container">
+                <h2>ADMISSION ENQUIRY FORM</h2>
+                <form onsubmit="validateForm(event)">
+                    <div class="form-group">
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Correct Email Format" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Interested Course:</label>
+                        <select id="course" name="course" required>
+                            <option value="" selected disabled>Select Your Interested Course</option>
+                            <option value="Blockchain Technology">Blockchain Technology</option>
+                            <option value="Software Development Program">Software Development Program</option>
+                            <option value="Hardware Programming Course">Hardware Programming Course</option>
+                            <option value="Ethical Hacking">Ethical Hacking</option>
+                            <option value="Information Technology Specialist Program">Information Technology Specialist Program</option>
+                            <option value="Cybersecurity and Cloud Computing">Cybersecurity and Cloud Computing</option>
+                            <option value="Artificial Intelligence Program">Artificial Intelligence Program</option>
+                            <option value="AI and Robotics Development">AI and Robotics Development</option>
+                            <option value="Computer Networking Course">Computer Networking Course</option>
+                            <option value="Web Developing Course">Web Developing Course</option>
+                            <option value="System Operation and Technician Program">System Operation and Technician Program</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Category of Enquiry:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="enrollment" name="enquiry-category[]" value="Enrollment">
+                                <label for="enrollment">Enrollment</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="course-structure" name="enquiry-category[]" value="Course Structure">
+                                <label for="course-structure">Course Structure</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="study-fees" name="enquiry-category[]" value="Study Fees">
+                                <label for="study-fees">Study Fees</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="others" name="enquiry-category[]" value="Others">
+                                <label for="others">Others</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="detailed-enquiry">Detailed Enquiry:</label>
+                        <textarea id="detailed-enquiry" name="detailed-enquiry" rows="4" placeholder="Type here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">SUBMIT</button>
+                        <button type="button" onclick="window.location.href='index.html'">CANCEL</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FutureSkills Training. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
